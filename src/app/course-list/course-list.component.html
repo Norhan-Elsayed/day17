@@ -1,0 +1,8 @@
+<div class="container shadow p-3 mb-5 bg-body rounded">
+    <input type="text" [(ngModel)]="newCourse" placeholder="Enter track name" />
+    <button (click)="addCourse()" class="btn btn-danger m-3">Add</button>
+  </div>
+  <div *ngFor="let course of courses" class="container p-3 mb-2 bg-info-subtle text-black">
+    <span>{{ course }}</span>
+    <button (click)="deleteCourse(course)" class="btn btn-danger m-3">Delete</button>
+  </div>
